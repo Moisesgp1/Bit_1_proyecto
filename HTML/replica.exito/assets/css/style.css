@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --color-fucsia: #da2f92; 
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .texto-promo{
+    border-radius: 8px;
+  }
+
+.promocion-encabezado{
+background: var(--color-fucsia);
+display: flex;
+justify-content: center;
+padding: 12px 0;
+}
+
+  .barra-navegacion{
+    background: #d1f30e;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    }
