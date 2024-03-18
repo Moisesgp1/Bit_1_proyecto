@@ -1,7 +1,7 @@
 
 
-
-
+.contenedor-1{
+    background-image: url(C:\Users\Usuario\Desktop\proyecto_bit_1\HTML\replica-microsoft);}
 
 
 .caja-principal{
@@ -17,16 +17,20 @@
 .caja-inicio{
     width: 440px;
             height: 350px;
-            background-color: #a39c9c;
+            background-color: white;
 }
 
 .inicio-sesion,.caja-correo{
             padding-left: 10%;
+            justify-content: center;
+}
+.email{
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
 }
 
-.caja-correo{
-
-}
 
 .caja-cuenta{
     display: flex;
@@ -49,30 +53,30 @@
     padding-top: 10%;
 }
 
-
 .caja-opciones-inicio{
 display: flex;
-align-items:;
-}
     
-.contenedor{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 .atras{
     padding: 10px 12px 10px 12px;
     margin-right: 5px;
     color:black
 }
+.atras{
+    padding: 10px 12px 10px 12px;
+    margin-right: 5px;
+    color:black
+}
+
 .siguiente{
     padding: 4px 12px 4px 12px;
     color:white;
     background-color:#0067b8;
     border-color: #0067b8;
-    
+}}
+.siguiente{
+    padding: 4px 12px 4px 12px;
+    color:white;
+    background-color:#0067b8;
+    border-color: #0067b8;
 }
