@@ -1,7 +1,8 @@
 
 
-.contenedor-1{
-    background-image: url(C:\Users\Usuario\Desktop\proyecto_bit_1\HTML\replica-microsoft);}
+body {
+    background-image: url(fondo-login-outlook.png);
+}
 
 
 .caja-principal{
@@ -17,7 +18,8 @@
 .caja-inicio{
     width: 440px;
             height: 350px;
-            background-color: white;
+            background-color: rgb(255, 255, 255);
+            border:#000;
 }
 
 .inicio-sesion,.caja-correo{
@@ -55,7 +57,7 @@
 
 .caja-opciones-inicio{
 display: flex;
-    
+}
 
 .atras{
     padding: 10px 12px 10px 12px;
@@ -68,12 +70,6 @@ display: flex;
     color:black
 }
 
-.siguiente{
-    padding: 4px 12px 4px 12px;
-    color:white;
-    background-color:#0067b8;
-    border-color: #0067b8;
-}}
 .siguiente{
     padding: 4px 12px 4px 12px;
     color:white;
