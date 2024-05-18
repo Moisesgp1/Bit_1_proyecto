@@ -50,7 +50,18 @@
 }
 
 .card{
-    background-color: hsla(240, 14%, 3%, 0.123);
+    background-color: hsla(0, 0%, 100%, 0.774);
 }
 
+
+.grilla-personajes { 
+  width: 100px; 
+  height: 100px; 
+  margin: 10px;
+}
+
+.card-img-top{
+  width: 180px; 
+  max-height: 140px;
+}
 

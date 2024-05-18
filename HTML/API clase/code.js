@@ -1,37 +1,34 @@
-let Grilla = document.querySelector('#grilla-personajes')
-let url_pokeapi = 'https://pokeapi.co/api/v2/pokemon'
-let dataAPI_pokeapi = fetch(url_pokeapi)
-let siguientepagina = fetch('https://pokeapi.co/api/v2/pokemon?offset=20&limit=20')
+let grilla = document.querySelector('#grilla-personajes');
+let urlPokeapi = 'https://pokeapi.co/api/v2/pokemon';
+let paginaactual = 1;
 
+async function obtenerPokemones() {
+    let dataAPI = await fetch(urlPokeapi);
+    let infoPokemon = await dataAPI.json();
+    let arrPokemones = infoPokemon.results;
 
-dataAPI_pokeapi.then(respuestaPromesa => respuestaPromesa.json())
-    .then(infojson => {
-        infojson.results.forEach(element => {
-        let urlPokemon = element.url
-        let consumoPokemon = fetch(urlPokemon)
-            consumoPokemon.then(respuestaPromesa => respuestaPromesa.json())
-                .then(infoPokemon => {
-                    
-Grilla.innerHTML += `
+    for (const pokemon of arrPokemones) {
+        let info = await fetch(pokemon.url);
+        let pokemonInformacion = await info.json();
 
-</div>
-<div class="card m-3" style="width: 12rem;">
-  <img src="${infoPokemon.sprites.other.dream_world.front_default}" class="card-img-top" alt="...">
-  <div class="card-body">
+        grilla.innerHTML += `
+        <div class="card m-3" style="width: 12rem;">
+        <div class="imagen" >
+            <img src="${pokemonInformacion.sprites.other.dream_world.front_default}" class="card-img-top" alt="${pokemonInformacion.name}">
+           </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa-solid fa-id-card"></i>  ${pokemonInformacion.name}</li>
+                    <li class="list-group-item"><i class="fa-solid fa-weight-hanging"></i>:  ${pokemonInformacion.weight}</li>
+                    <li class="list-group-item"><i class="fa-solid fa-arrows-up-down"></i>:  ${pokemonInformacion.height}</li>
+                    <li class="list-group-item"><i class="fa-brands fa-elementor"></i>   ${pokemonInformacion.types[0].type.name} </li>
+                    </ul>
+            </div>
+        </div>`;
 
+        
+    }
+}
 
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${infoPokemon.name}</li>
-    <li class="list-group-item">Peso: ${infoPokemon.weight}</li>
-    <li class="list-group-item">tipo: ${infoPokemon.types[0].type.name} </li>
-    
-  </ul>
+obtenerPokemones();
 
-`
-
-
-}).catch(error => {
-console.log(error)  })
-});
-})
