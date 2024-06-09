@@ -1,0 +1,25 @@
+.contenedorPadre {
+    height: 95vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.letraPiano {
+    font-family: 'Pacifico', cursive;
+}
+
+.tecla-piano {
+    width: 80px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 2px;
+    cursor: pointer;
+    align-content: center;
+    font-weight: bold;
+    font-size: 30px;    
+}
+
+.tecla-piano:active {
+    background-color: black;
+}
